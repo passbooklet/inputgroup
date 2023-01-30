@@ -1,0 +1,415 @@
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    margin-top: 10px;
+    margin-left: 1rem;
+    width: 100%;
+    max-width: 180px;
+  }
+  
+.form__field {
+  
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    color: rgb(16, 9, 9);
+    padding: 7px 1rem 7px 0rem;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+.form__field::placeholder {
+    color: transparent;
+  }
+  
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+    
+  }
+  
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9b9b9b;
+    pointer-events: none;
+  }
+  
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: auto;
+    border-bottom: 2rem;
+    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
+  }
+  
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #17C3B2;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  .form__field:required, .form__field:invalid {
+    box-shadow: none;
+  }
+  .card {
+    width: auto;
+    height: auto;
+    padding-right: 3rem;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+               -15px -15px 30px #ffffff;
+  }
+  .centerbutton{
+    display: flex;
+    justify-content: center;
+  }
+  .button1 {
+
+    padding: 0.8em 1.8em;
+    border: 2px solid #17C3B2;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #17C3B2;
+   }
+   
+   .button1::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #17C3B2;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   .button1:hover::before {
+    width: 105%;
+   }
+   
+   .button1:hover {
+    color: #111;
+   }
+   .button2 {
+    padding: 0.8em 1.8em;
+    border: 2px solid #6d84cf;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #6d84cf;
+   }
+   
+   .button2::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #6d84cf;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   .button2:hover::before {
+    width: 105%;
+   }
+   
+   .button2:hover {
+    color: #111;
+   }
+   .card12 {
+    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+    width: auto;
+    height: auto;
+    padding: 5px;
+    border-radius: 0;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+   }
+   
+   .card12::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity .5s;
+   }
+   
+   .card12-info {
+    --color: #181818;
+    background: var(--color);
+    color: var(--color);
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: .7rem;
+   }
+   
+   /*Hover*/
+   .card12:hover::after {
+    opacity: 0;
+   }
+   
+   .title {
+    color: #f7ba2b;
+    padding:3rem 2rem 3rem 2rem ;
+   }
+   .title2 {
+    color: #ea5358;
+    padding:3rem 2rem 3rem 2rem ;
+   }
+   .deletebutton {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    touch-action: manipulation;
+   }
+   
+   .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+       to left,
+       hsl(340deg 100% 16%) 0%,
+       hsl(340deg 100% 32%) 8%,
+       hsl(340deg 100% 32%) 92%,
+       hsl(340deg 100% 16%) 100%
+     );
+   }
+   
+   .front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .deletebutton:hover {
+    filter: brightness(110%);
+   }
+   
+   .deletebutton:hover .front {
+    transform: translateY(-6px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   .deletebutton:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+   }
+   
+   .deletebutton:hover .shadow {
+    transform: translateY(4px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   .deletebutton:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+   }
+   
+   .deletebutton:focus:not(:focus-visible) {
+    outline: none;
+   }
+   .updatebutton {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    touch-action: manipulation;
+   }
+   
+   .shadow1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .edge1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+       to left,
+       rgb(48, 47, 66) 0%,
+       rgb(157, 136, 207) 8%,
+       rgb(123, 83, 163) 92%,
+       rgb(127, 97, 165) 100%
+     );
+   }
+   
+   .front1 {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: rgb(107, 95, 184);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .updatebutton:hover {
+    filter: brightness(110%);
+   }
+   
+   .updatebutton:hover .front {
+    transform: translateY(-6px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   .updatebutton:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+   }
+   
+   .updatebutton:hover .shadow {
+    transform: translateY(4px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   .updatebutton:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+   }
+   
+   .updatebutton:focus:not(:focus-visible) {
+    outline: none;
+   }
+  
+
+
+
+
+
+
+
+
+  @media(min-width: 0px) and (max-width: 899px) {
+    .centeraligin{
+      display: flex;
+      justify-content: center;
+  
+    }  
+    .centeraligin2{
+      display: flex;
+      justify-content: center;
+  
+    }      
+    
+  }
+  
+  @media(min-width: 900px) and ((max-width: 2000px)) {
+    .centeraligin{
+      float: left;
+      margin-left: 5rem;
+    }
+    .centeraligin2{
+      float: right;
+      margin-right: 7rem;
+    }
+} 
